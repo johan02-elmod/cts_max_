@@ -268,151 +268,151 @@ if __name__ == "__main__":
                 "49",
             ]
             console.print(
-                "[bold red][bold white](01)[/bold white]: Aumentar el dinero                 [bold red]1500K[/bold red][/bold red]"
+                "[bold red][bold white](01)[/bold white]: Aumentar el dinero                                                             [bold red]1500K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](02)[/bold white]: Aumentar monedas                 [bold red]1500K[/bold red][/bold red]"
+                "[bold red][bold white](02)[/bold white]: Aumentar monedas                                                               [bold red]1500K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](03)[/bold white]: Rango De Rey                      [bold red]8000K[/bold red][/bold red]"
+                "[bold red][bold white](03)[/bold white]: Rango De Rey                                                                   [bold red]8000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](04)[/bold white]: Cambiar ID                      [bold red]4500K[/bold red][/bold red]"
+                "[bold red][bold white](04)[/bold white]: Cambiar ID                                                                     [bold red]4500K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](05)[/bold white]: Cambiar nombre                    [bold red]100[/bold red][/bold red]"
+                "[bold red][bold white](05)[/bold white]: Cambiar nombre                                                                 [bold red]100[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](06)[/bold white]: Cambiar nombre (Arcoíris)          [bold red]100[/bold red][/bold red]"
+                "[bold red][bold white](06)[/bold white]: Cambiar nombre (Arcoíris)                                                      [bold red]100[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](07)[/bold white]: Placas de matrícula                  [bold red]2000K[/bold red][/bold red]"
+                "[bold red][bold white](07)[/bold white]: Placas de matrícula                                                            [bold red]2000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](08)[/bold white]: Eliminar cuenta                 [bold red]Gratis[/bold red][/bold red]"
+                "[bold red][bold white](08)[/bold white]: Eliminar cuenta                                                                [bold red]Gratis[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](09)[/bold white]: Registro de cuenta               [bold red]Gratis[/bold red][/bold red]"
+                "[bold red][bold white](09)[/bold white]: Registro de cuenta                                                             [bold red]Gratis[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](10)[/bold white]: Eliminar amigos                 [bold red]500[/bold red][/bold red]"
+                "[bold red][bold white](10)[/bold white]: Eliminar amigos                                                                [bold red]500[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](11)[/bold white]: Desbloquear Lamborghinis (solo iPhone) [bold red]5000K[/bold red][/bold red]"
+                "[bold red][bold white](11)[/bold white]: Desbloquear Lamborghinis (solo iPhone)                                         [bold red]5000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](12)[/bold white]: Desbloquear todos los coches                [bold red]6000K[/bold red][/bold red]"
+                "[bold red][bold white](12)[/bold white]: Desbloquear todos los coches                                                   [bold red]6000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](13)[/bold white]: Desbloquear la sirena de todos los coches          [bold red]3500K[/bold red][/bold red]"
+                "[bold red][bold white](13)[/bold white]: Desbloquear la sirena de todos los coches                                       [bold red]3500K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](14)[/bold white]: Desbloquear el motor W16              [bold red]4000K[/bold red][/bold red]"
+                "[bold red][bold white](14)[/bold white]: Desbloquear el motor W16                                                        [bold red]4000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](15)[/bold white]: Desbloquea todos los claxon               [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](15)[/bold white]: Desbloquea todos los claxon                                                     [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](16)[/bold white]: Desactivar Daño del motor        [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](16)[/bold white]: Desactivar Daño del motor                                                       [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](17)[/bold white]: Desbloquea combustible ilimitado          [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](17)[/bold white]: Desbloquea combustible ilimitado                                                [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](18)[/bold white]: Desbloquear casa 3                  [bold red]4000K[/bold red][/bold red]"
+                "[bold red][bold white](18)[/bold white]: Desbloquear casa 3                                                              [bold red]4000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](19)[/bold white]: Desbloquear humo                   [bold red]4000K[/bold red][/bold red]"
+                "[bold red][bold white](19)[/bold white]: Desbloquear humo                                                                [bold red]4000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](20)[/bold white]: Desbloquear rines                  [bold red]4000K[/bold red][/bold red]"
+                "[bold red][bold white](20)[/bold white]: Desbloquear rines                                                               [bold red]4000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](21)[/bold white]: Desbloquear animaciones              [bold red]2000K[/bold red][/bold red]"
+                "[bold red][bold white](21)[/bold white]: Desbloquear animaciones                                                         [bold red]2000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](22)[/bold white]: Desbloquear equipos M                                          [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](22)[/bold white]: Desbloquear equipos M                                                           [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](23)[/bold white]: Desbloquear equipos F                                           [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](23)[/bold white]: Desbloquear equipos F                                                           [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](24)[/bold white]: Cambiar carreras ganadas                                       [bold red]1000K[/bold red][/bold red]"
+                "[bold red][bold white](24)[/bold white]: Cambiar carreras ganadas                                                        [bold red]1000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](25)[/bold white]: Cambiar carreras perdidas                                       [bold red]1000K[/bold red][/bold red]"
+                "[bold red][bold white](25)[/bold white]: Cambiar carreras perdidas                                                       [bold red]1000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](26)[/bold white]: Clonar cuenta                                                         [bold red]7000K[/bold red][/bold red]"
+                "[bold red][bold white](26)[/bold white]: Clonar cuenta                                                                   [bold red]7000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](27)[/bold white]: HP personalizado                                                    [bold red]2500K[/bold red][/bold red]"
+                "[bold red][bold white](27)[/bold white]: HP personalizado                                                                [bold red]2500K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](28)[/bold white]: Ángulo personalizado                                              [bold red]1500K[/bold red][/bold red]"
+                "[bold red][bold white](28)[/bold white]: Ángulo personalizado                                                            [bold red]1500K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](29)[/bold white]: Quemador neumáticos personalizado                      [bold red]1500K[/bold red][/bold red]"
+                "[bold red][bold white](29)[/bold white]: Quemador neumáticos personalizado                                               [bold red]1500K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](30)[/bold white]: Millaje de coches personalizados                              [bold red]1500K[/bold red][/bold red]"
+                "[bold red][bold white](30)[/bold white]: Millaje de coches personalizados                                                [bold red]1500K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](31)[/bold white]: Freno de coche personalizado                                   [bold red]2000K[/bold red][/bold red]"
+                "[bold red][bold white](31)[/bold white]: Freno de coche personalizado                                                    [bold red]2000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](32)[/bold white]: Quitar el parachoques trasero                                   [bold red]2000K[/bold red][/bold red]"
+                "[bold red][bold white](32)[/bold white]: Quitar el parachoques trasero                                                   [bold red]2000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](33)[/bold white]: Quitar el parachoques delantero                               [bold red]2000K[/bold red][/bold red]"
+                "[bold red][bold white](33)[/bold white]: Quitar el parachoques delantero                                                 [bold red]2000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](34)[/bold white]: Cambiar la contraseña de la cuenta                       [bold red]2000K[/bold red][/bold red]"
+                "[bold red][bold white](34)[/bold white]: Cambiar la contraseña de la cuenta                                              [bold red]2000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](35)[/bold white]: Cambiar el correo electrónico de la cuenta            [bold red]2000K[/bold red][/bold red]"
+                "[bold red][bold white](35)[/bold white]: Cambiar el correo electrónico de la cuenta                                      [bold red]2000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](36)[/bold white]: Alerón personalizado                                              [bold red]1000K[/bold red][/bold red]"
+                "[bold red][bold white](36)[/bold white]: Alerón personalizado                                                            [bold red]1000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](37)[/bold white]: Kit de carrocería personalizado                                [bold red]1000K[/bold red][/bold red]"
+                "[bold red][bold white](37)[/bold white]: Kit de carrocería personalizado                                                 [bold red]1000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](38)[/bold white]: Desbloquea rines premium                                      [bold red]4500K[/bold red][/bold red]"
+                "[bold red][bold white](38)[/bold white]: Desbloquea rines premium                                                        [bold red]4500K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](39)[/bold white]: Desbloquear Toyota Crown                                      [bold red]2000K[/bold red][/bold red]"
+                "[bold red][bold white](39)[/bold white]: Desbloquear Toyota Crown                                                        [bold red]2000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](40)[/bold white]: Desbloquear sombrero de clan (M)                           [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](40)[/bold white]: Desbloquear sombrero de clan (M)                                                [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](41)[/bold white]: Quitar cabeza macho                                                [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](41)[/bold white]: Quitar cabeza macho                                                             [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](42)[/bold white]: Quitar cabeza hembra                                              [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](42)[/bold white]: Quitar cabeza hembra                                                            [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](43)[/bold white]: Desbloquear el Top 1 del Clan (M)                             [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](43)[/bold white]: Desbloquear el Top 1 del Clan (M)                                               [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](44)[/bold white]: Desbloquear los 2 mejores del clan (M)                     [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](44)[/bold white]: Desbloquear los 2 mejores del clan (M)                                          [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](45)[/bold white]: Desbloquear los 3 mejores del clan (M)                      [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](45)[/bold white]: Desbloquear los 3 mejores del clan (M)                                          [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](46)[/bold white]: Desbloquear el Top 1 del Clan (FM)                             [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](46)[/bold white]: Desbloquear el Top 1 del Clan (FM)                                              [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](47)[/bold white]: Desbloquear los 2 mejores del clan (FM)                     [bold red]3000K[/bold red][/bold red]"
+                "[bold red][bold white](47)[/bold white]: Desbloquear los 2 mejores del clan (FM)                                         [bold red]3000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](48)[/bold white]: Desbloquear Mercedes Cls                                          [bold red]4000K[/bold red][/bold red]"
+                "[bold red][bold white](48)[/bold white]: Desbloquear Mercedes Cls                                                        [bold red]4000K[/bold red][/bold red]"
             )
             console.print(
-                "[bold red][bold white](49)[/bold white]: Comba de postura                                                       [bold red]1000K[/bold red][/bold red]"
+                "[bold red][bold white](49)[/bold white]: Comba de postura                                                                [bold red]1000K[/bold red][/bold red]"
             )
             console.print(
                 "[bold red][bold white](0) [/bold white]: Salir de la herramienta [/bold red]"
