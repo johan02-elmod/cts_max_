@@ -71,7 +71,7 @@ def load_player_data(cpm):
 
     if not response.get("ok"):
         console.print(
-            "[bold yellow]⚠️ WARNING: Your login seems to be invalid or misconfigured.[/bold yellow]"
+            "[bold yellow]⚠️ ADVERTENCIA: Su inicio de sesión parece ser inválido o estar mal configurado.[/bold yellow]"
         )
         data = {}
     else:
@@ -81,24 +81,24 @@ def load_player_data(cpm):
 
     if not required_keys.issubset(data):
         console.print(
-            "[bold yellow]⚠️ WARNING: New accounts must log into the game at least once for full data to be available.[/bold yellow]"
+            "[bold yellow]⚠️ ADVERTENCIA: Las cuentas nuevas deben iniciar sesión en el juego al menos una vez para que los datos completos estén disponibles.[/bold yellow]"
         )
 
     console.print(
-        "[bold yellow]========[white] PLAYER DETAILS [/white]========[/bold yellow]"
+        "[bold yellow]========[white] DETALLES DE LA CUENTA [/white]========[/bold yellow]"
     )
 
     console.print(
-        f"[bold white]   >> Name        : {data.get('Name', 'UNDEFINED')}[/bold white]"
+        f"[bold white]   >> Name        : {data.get('Nombre', 'UNDEFINED')}[/bold white]"
     )
     console.print(
-        f"[bold white]   >> LocalID     : {data.get('localID', 'UNDEFINED')}[/bold white]"
+        f"[bold white]   >> LocalID     : {data.get('ID', 'UNDEFINED')}[/bold white]"
     )
     console.print(
-        f"[bold white]   >> Moneys      : {data.get('money', 'UNDEFINED')}[/bold white]"
+        f"[bold white]   >> Moneys      : {data.get('Plata', 'UNDEFINED')}[/bold white]"
     )
     console.print(
-        f"[bold white]   >> Coins       : {data.get('coin', 'UNDEFINED')}[/bold white]"
+        f"[bold white]   >> Coins       : {data.get('Monedas', 'UNDEFINED')}[/bold white]"
     )
 
 
