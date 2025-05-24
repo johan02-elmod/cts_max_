@@ -58,9 +58,9 @@ def banner(console):
         "[bold white] ============================================================[/bold white]"
     )
     console.print(
-        "[bold red]      𝗣𝗢𝗥 𝗙𝗔𝗩𝗢𝗥, 𝗖𝗜𝗘𝗥𝗥𝗘 𝗦𝗘𝗦𝗜𝗢𝗡 𝗘𝗡 𝗖𝗣𝗠 𝗔𝗡𝗧𝗘𝗦 𝗗𝗘 𝗨𝗦𝗔𝗥 𝗟𝗔 𝗛𝗘𝗥𝗥𝗔𝗠𝗜𝗘𝗡𝗧𝗔[/bold red]"
+        "[bold yellow]      𝗣𝗢𝗥 𝗙𝗔𝗩𝗢𝗥, 𝗖𝗜𝗘𝗥𝗥𝗘 𝗦𝗘𝗦𝗜𝗢𝗡 𝗘𝗡 𝗖𝗣𝗠 𝗔𝗡𝗧𝗘𝗦 𝗗𝗘 𝗨𝗦𝗔𝗥 𝗟𝗔 𝗛𝗘𝗥𝗥𝗔𝗠𝗜𝗘𝗡𝗧𝗔[/bold yellow]"
     )
-    console.print("[bold red]      𝗡𝗢 𝗘𝗦𝗧𝗔 𝗣𝗘𝗥𝗠𝗜𝗧𝗜𝗗𝗢 𝗖𝗢𝗠𝗣𝗔𝗥𝗧𝗜𝗥 𝗟𝗔 𝗖𝗟𝗔𝗩𝗘 𝗗𝗘 𝗔𝗖𝗖𝗘𝗦𝗢[/bold red]")
+    console.print("[bold yellow]      𝗡𝗢 𝗘𝗦𝗧𝗔 𝗣𝗘𝗥𝗠𝗜𝗧𝗜𝗗𝗢 𝗖𝗢𝗠𝗣𝗔𝗥𝗧𝗜𝗥 𝗟𝗔 𝗖𝗟𝗔𝗩𝗘 𝗗𝗘 𝗔𝗖𝗖𝗘𝗦𝗢[/bold yellow]")
     console.print(
         "[bold white] ============================================================[/bold white]"
     )
@@ -71,7 +71,7 @@ def load_player_data(cpm):
 
     if not response.get("ok"):
         console.print(
-            "[bold red]⚠️ ADVERTENCIA: Su inicio de sesión parece ser inválido o estar mal configurado.[/bold red]"
+            "[bold yellow]⚠️ WARNING: Your login seems to be invalid or misconfigured.[/bold yellow]"
         )
         data = {}
     else:
@@ -81,24 +81,24 @@ def load_player_data(cpm):
 
     if not required_keys.issubset(data):
         console.print(
-            "[bold yellow]⚠️ ADVERTENCIA: Las cuentas nuevas deben iniciar sesión en el juego al menos una vez para que los datos completos estén disponibles..[/bold yellow]"
+            "[bold yellow]⚠️ WARNING: New accounts must log into the game at least once for full data to be available.[/bold yellow]"
         )
 
     console.print(
-        "[bold red]========[white] DETALLES DEL JUGADOR [/white]========[/bold red]"
+        "[bold yellow]========[white] PLAYER DETAILS [/white]========[/bold yellow]"
     )
 
-    console.print(        
-        f"[bold white]   >> Name        : {data.get('Nombre', 'UNDEFINED')}[/bold white]"
+    console.print(
+        f"[bold white]   >> Name        : {data.get('Name', 'UNDEFINED')}[/bold white]"
     )
     console.print(
-        f"[bold white]   >> LocalID     : {data.get('ID', 'UNDEFINED')}[/bold white]"
+        f"[bold white]   >> LocalID     : {data.get('localID', 'UNDEFINED')}[/bold white]"
     )
     console.print(
-        f"[bold white]   >> Moneys      : {data.get('dinero', 'UNDEFINED')}[/bold white]"
+        f"[bold white]   >> Moneys      : {data.get('money', 'UNDEFINED')}[/bold white]"
     )
     console.print(
-        f"[bold white]   >> Coins       : {data.get('monedas', 'UNDEFINED')}[/bold white]"
+        f"[bold white]   >> Coins       : {data.get('coin', 'UNDEFINED')}[/bold white]"
     )
 
 
@@ -128,7 +128,7 @@ def prompt_valid_value(content, tag, password=False):
         value = Prompt.ask(content, password=password)
         if not value or value.isspace():
             console.print(
-                f"[bold red]{tag} No puede estar vacío ni contener solo espacios. Inténtalo de nuevo. (✘)[/bold red]"
+                f"[bold yellow]{tag} No puede estar vacío ni contener solo espacios. Inténtalo de nuevo. (✘)[/bold yellow]"
             )
         else:
             return value
@@ -138,13 +138,13 @@ def load_client_details():
     response = requests.get("http://ip-api.com/json")
     data = response.json()
     console.print(
-        "[bold red] =============[bold white][ LOCALIZACIÓN ][/bold white]=============[/bold red]"
+        "[bold yellow] =============[bold white][ LOCALIZACIÓN ][/bold white]=============[/bold yellow]"
     )
     console.print(
         f"[bold white]    >> Country    : {data.get('country')} {data.get('zip')}[/bold white]"
     )
     console.print(
-        "[bold red] ===============[bold white][ ＭＥＮＵ ][/bold white]===========[/bold red]"
+        "[bold yellow] ===============[bold white][ ＭＥＮＵ ][/bold white]===========[/bold yellow]"
     )
 
 
@@ -183,26 +183,26 @@ if __name__ == "__main__":
         acc_access_key = prompt_valid_value(
             "[bold][?] Clave de acceso[/bold]", "ACCESS KEY", password=False
         )
-        console.print("[bold red][%] Intentando iniciar sesión[/bold red]: ", end=None)
+        console.print("[bold yellow][%] Intentando iniciar sesión[/bold yellow]: ", end=None)
         cpm = CPMCheats(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
-                console.print("[bold red]CUENTA NO ENCONTRADA (✘)[/bold red]")
+                console.print("[bold yellow]CUENTA NO ENCONTRADA (✘)[/bold yellow]")
                 sleep(2)
                 continue
             elif login_response == 101:
-                console.print("[bold red]CONTRASEÑA INCORRECTA (✘)[/bold red]")
+                console.print("[bold yellow]CONTRASEÑA INCORRECTA (✘)[/bold yellow]")
                 sleep(2)
                 continue
             elif login_response == 103:
-                console.print("[bold red]CLAVE DE ACCESO NO VÁLIDA (✘)[/bold red]")
+                console.print("[bold yellow]CLAVE DE ACCESO NO VÁLIDA (✘)[/bold yellow]")
                 sleep(2)
                 continue
             else:
-                console.print("[bold red]TRY AGAIN[/bold red]")
+                console.print("[bold yellow]TRY AGAIN[/bold yellow]")
                 console.print(
-                    "[bold red] '! Nota: asegúrese de completar los campos ![/bold red]"
+                    "[bold yellow] '! Nota: asegúrese de completar los campos ![/bold yellow]"
                 )
                 sleep(2)
                 continue
@@ -268,158 +268,158 @@ if __name__ == "__main__":
                 "49",
             ]
             console.print(
-                "[bold red][bold white](01)[/bold white]: Aumentar el dinero                              [bold red]1500K[/bold red][/bold red]"
+                "[bold yellow][bold white](01)[/bold white]: Aumentar el dinero                              [bold yellow]1500K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](02)[/bold white]: Aumentar monedas                                [bold red]1500K[/bold red][/bold red]"
+                "[bold yellow][bold white](02)[/bold white]: Aumentar monedas                                [bold yellow]1500K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](03)[/bold white]: Rango De Rey                                    [bold red]8000K[/bold red][/bold red]"
+                "[bold yellow][bold white](03)[/bold white]: Rango De Rey                                    [bold yellow]8000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](04)[/bold white]: Cambiar ID                                      [bold red]4500K[/bold red][/bold red]"
+                "[bold yellow][bold white](04)[/bold white]: Cambiar ID                                      [bold yellow]4500K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](05)[/bold white]: Cambiar nombre                                  [bold red]100[/bold red][/bold red]"
+                "[bold yellow][bold white](05)[/bold white]: Cambiar nombre                                  [bold yellow]100[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](06)[/bold white]: Cambiar nombre (Arcoíris)                       [bold red]100[/bold red][/bold red]"
+                "[bold yellow][bold white](06)[/bold white]: Cambiar nombre (Arcoíris)                       [bold yellow]100[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](07)[/bold white]: Diseños de placas aleatorias                    [bold red]2000K[/bold red][/bold red]"
+                "[bold yellow][bold white](07)[/bold white]: Diseños de placas aleatorias                    [bold yellow]2000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](08)[/bold white]: Eliminar cuenta                                 [bold red]Gratis[/bold red][/bold red]"
+                "[bold yellow][bold white](08)[/bold white]: Eliminar cuenta                                 [bold yellow]Gratis[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](09)[/bold white]: Registro de cuenta                              [bold red]Gratis[/bold red][/bold red]"
+                "[bold yellow][bold white](09)[/bold white]: Registro de cuenta                              [bold yellow]Gratis[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](10)[/bold white]: Eliminar amigos                                 [bold red]500[/bold red][/bold red]"
+                "[bold yellow][bold white](10)[/bold white]: Eliminar amigos                                 [bold yellow]500[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](11)[/bold white]: Desbloquear Lamborghinis (solo iPhone)          [bold red]5000K[/bold red][/bold red]"
+                "[bold yellow][bold white](11)[/bold white]: Desbloquear Lamborghinis (solo iPhone)          [bold yellow]5000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](12)[/bold white]: Desbloquear todos los coches                    [bold red]6000K[/bold red][/bold red]"
+                "[bold yellow][bold white](12)[/bold white]: Desbloquear todos los coches                    [bold yellow]6000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](13)[/bold white]: Desbloquear la sirena de todos los coches       [bold red]3500K[/bold red][/bold red]"
+                "[bold yellow][bold white](13)[/bold white]: Desbloquear la sirena de todos los coches       [bold yellow]3500K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](14)[/bold white]: Desbloquear el motor W16                        [bold red]4000K[/bold red][/bold red]"
+                "[bold yellow][bold white](14)[/bold white]: Desbloquear el motor W16                        [bold yellow]4000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](15)[/bold white]: Desbloquea todos los claxon                     [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](15)[/bold white]: Desbloquea todos los claxon                     [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](16)[/bold white]: Desactivar Daño del motor                       [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](16)[/bold white]: Desactivar Daño del motor                       [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](17)[/bold white]: Desbloquea combustible ilimitado                [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](17)[/bold white]: Desbloquea combustible ilimitado                [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](18)[/bold white]: Desbloquear casa 3                              [bold red]4000K[/bold red][/bold red]"
+                "[bold yellow][bold white](18)[/bold white]: Desbloquear casa 3                              [bold yellow]4000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](19)[/bold white]: Desbloquear humo                                [bold red]4000K[/bold red][/bold red]"
+                "[bold yellow][bold white](19)[/bold white]: Desbloquear humo                                [bold yellow]4000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](20)[/bold white]: Desbloquear rines                               [bold red]4000K[/bold red][/bold red]"
+                "[bold yellow][bold white](20)[/bold white]: Desbloquear rines                               [bold yellow]4000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](21)[/bold white]: Desbloquear animaciones                         [bold red]2000K[/bold red][/bold red]"
+                "[bold yellow][bold white](21)[/bold white]: Desbloquear animaciones                         [bold yellow]2000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](22)[/bold white]: Desbloquear equipos M                           [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](22)[/bold white]: Desbloquear equipos M                           [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](23)[/bold white]: Desbloquear equipos F                           [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](23)[/bold white]: Desbloquear equipos F                           [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](24)[/bold white]: Cambiar carreras ganadas                        [bold red]1000K[/bold red][/bold red]"
+                "[bold yellow][bold white](24)[/bold white]: Cambiar carreras ganadas                        [bold yellow]1000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](25)[/bold white]: Cambiar carreras perdidas                       [bold red]1000K[/bold red][/bold red]"
+                "[bold yellow][bold white](25)[/bold white]: Cambiar carreras perdidas                       [bold yellow]1000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](26)[/bold white]: Clonar cuenta                                   [bold red]7000K[/bold red][/bold red]"
+                "[bold yellow][bold white](26)[/bold white]: Clonar cuenta                                   [bold yellow]7000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](27)[/bold white]: HP personalizado                                [bold red]2500K[/bold red][/bold red]"
+                "[bold yellow][bold white](27)[/bold white]: HP personalizado                                [bold yellow]2500K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](28)[/bold white]: Ángulo personalizado                            [bold red]1500K[/bold red][/bold red]"
+                "[bold yellow][bold white](28)[/bold white]: Ángulo personalizado                            [bold yellow]1500K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](29)[/bold white]: Quemador neumáticos personalizado               [bold red]1500K[/bold red][/bold red]"
+                "[bold yellow][bold white](29)[/bold white]: Quemador neumáticos personalizado               [bold yellow]1500K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](30)[/bold white]: Millaje de coches personalizados                [bold red]1500K[/bold red][/bold red]"
+                "[bold yellow][bold white](30)[/bold white]: Millaje de coches personalizados                [bold yellow]1500K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](31)[/bold white]: Freno de coche personalizado                    [bold red]2000K[/bold red][/bold red]"
+                "[bold yellow][bold white](31)[/bold white]: Freno de coche personalizado                    [bold yellow]2000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](32)[/bold white]: Quitar el parachoques trasero                   [bold red]2000K[/bold red][/bold red]"
+                "[bold yellow][bold white](32)[/bold white]: Quitar el parachoques trasero                   [bold yellow]2000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](33)[/bold white]: Quitar el parachoques delantero                 [bold red]2000K[/bold red][/bold red]"
+                "[bold yellow][bold white](33)[/bold white]: Quitar el parachoques delantero                 [bold yellow]2000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](34)[/bold white]: Cambiar la contraseña de la cuenta              [bold red]2000K[/bold red][/bold red]"
+                "[bold yellow][bold white](34)[/bold white]: Cambiar la contraseña de la cuenta              [bold yellow]2000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](35)[/bold white]: Cambiar el correo electrónico de la cuenta      [bold red]2000K[/bold red][/bold red]"
+                "[bold yellow][bold white](35)[/bold white]: Cambiar el correo electrónico de la cuenta      [bold yellow]2000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](36)[/bold white]: Alerón personalizado                            [bold red]1000K[/bold red][/bold red]"
+                "[bold yellow][bold white](36)[/bold white]: Alerón personalizado                            [bold yellow]1000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](37)[/bold white]: Kit de carrocería personalizado                 [bold red]1000K[/bold red][/bold red]"
+                "[bold yellow][bold white](37)[/bold white]: Kit de carrocería personalizado                 [bold yellow]1000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](38)[/bold white]: Desbloquea rines premium                        [bold red]4500K[/bold red][/bold red]"
+                "[bold yellow][bold white](38)[/bold white]: Desbloquea rines premium                        [bold yellow]4500K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](39)[/bold white]: Desbloquear Toyota Crown                        [bold red]2000K[/bold red][/bold red]"
+                "[bold yellow][bold white](39)[/bold white]: Desbloquear Toyota Crown                        [bold yellow]2000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](40)[/bold white]: Desbloquear sombrero de clan (M)                [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](40)[/bold white]: Desbloquear sombrero de clan (M)                [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](41)[/bold white]: Quitar cabeza macho                             [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](41)[/bold white]: Quitar cabeza macho                             [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](42)[/bold white]: Quitar cabeza hembra                            [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](42)[/bold white]: Quitar cabeza hembra                            [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](43)[/bold white]: Desbloquear el Top 1 del Clan (M)               [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](43)[/bold white]: Desbloquear el Top 1 del Clan (M)               [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](44)[/bold white]: Desbloquear los 2 mejores del clan (M)          [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](44)[/bold white]: Desbloquear los 2 mejores del clan (M)          [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](45)[/bold white]: Desbloquear los 3 mejores del clan (M)          [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](45)[/bold white]: Desbloquear los 3 mejores del clan (M)          [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](46)[/bold white]: Desbloquear el Top 1 del Clan (FM)              [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](46)[/bold white]: Desbloquear el Top 1 del Clan (FM)              [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](47)[/bold white]: Desbloquear los 2 mejores del clan (FM)         [bold red]3000K[/bold red][/bold red]"
+                "[bold yellow][bold white](47)[/bold white]: Desbloquear los 2 mejores del clan (FM)         [bold yellow]3000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](48)[/bold white]: Desbloquear Mercedes Cls                        [bold red]4000K[/bold red][/bold red]"
+                "[bold yellow][bold white](48)[/bold white]: Desbloquear Mercedes Cls                        [bold yellow]4000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](49)[/bold white]: Comba de postura                                [bold red]1000K[/bold red][/bold red]"
+                "[bold yellow][bold white](49)[/bold white]: Comba de postura                                [bold yellow]1000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold red][bold white](0) [/bold white]: Salir de la herramienta [/bold red]"
+                "[bold yellow][bold white](0) [/bold white]: Salir de la herramienta [/bold yellow]"
             )
 
             console.print(
-                "[bold red]===============[bold white][ CTS_MAX_ ][/bold white]===============[/bold red]"
+                "[bold yellow]===============[bold white][ CTS_MAX_ ][/bold white]===============[/bold yellow]"
             )
 
             service = IntPrompt.ask(
@@ -429,14 +429,14 @@ if __name__ == "__main__":
             )
 
             console.print(
-                "[bold red]===============[bold white][ CTS_MAFX_ ][/bold white]===============[/bold red]"
+                "[bold yellow]===============[bold white][ CTS_MAFX_ ][/bold white]===============[/bold yellow]"
             )
 
             if service == 0:  # Exit
                 console.print("[bold white] Gracias por usar mi herramienta[/bold white]")
             elif service == 1:  # Increase Money
                 console.print(
-                    "[bold red][bold white][?][/bold white] Inserta cuanto dinero deseas[/bold red]"
+                    "[bold yellow][bold white][?][/bold white] Inserta cuanto dinero deseas[/bold yellow]"
                 )
                 amount = IntPrompt.ask("[?] Cantidad")
                 console.print("[%] Guardado de datos: ", end=None)
@@ -456,20 +456,20 @@ if __name__ == "__main__":
                         else:
                             continue
                     else:
-                        console.print("[bold red]FALLIDO (✘)[/bold red]")
+                        console.print("[bold yellow]FALLIDO (✘)[/bold yellow]")
                         console.print(
-                            "[bold red]Por favor, inténtelo de nuevo más tarde! (✘)[/bold red]"
+                            "[bold yellow]Por favor, inténtelo de nuevo más tarde! (✘)[/bold yellow]"
                         )
                         sleep(2)
                         continue
                 else:
-                    console.print("[bold red]FALLIDO (✘)[/bold red]")
-                    console.print("[bold red]¡Por favor utilice valores válidos! (✘)[/bold red]")
+                    console.print("[bold yellow]FALLIDO (✘)[/bold yellow]")
+                    console.print("[bold yellow]¡Por favor utilice valores válidos! (✘)[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 2:  # Increase Coins
                 console.print(
-                    "[bold red][bold white][?][/bold white] Inserta cuantas monedas deseas[/bold red]"
+                    "[bold yellow][bold white][?][/bold white] Inserta cuantas monedas deseas[/bold yellow]"
                 )
                 amount = IntPrompt.ask("[?] Cantidad")
                 print("[ % ] Guardado de datos: ", end="")
@@ -489,30 +489,30 @@ if __name__ == "__main__":
                         else:
                             continue
                     else:
-                        console.print("[bold red]FALLIDO[/bold red]")
-                        console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                        console.print("[bold yellow]FALLIDO[/bold yellow]")
+                        console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                         sleep(2)
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red] 'Por favor, utilice valores válidos[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow] 'Por favor, utilice valores válidos[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 3:  # King Rank
                 console.print(
-                    "[bold red][!] Nota:[/bold red]: Si el rango de rey no aparece en el juego, ciérrelo y ábralo varias veces..",
+                    "[bold yellow][!] Nota:[/bold yellow]: Si el rango de rey no aparece en el juego, ciérrelo y ábralo varias veces..",
                     end=None,
                 )
                 console.print(
-                    "[bold red][!] Note:[/bold red]: Por favor, no hagas King Rank en la misma cuenta dos veces..",
+                    "[bold yellow][!] Note:[/bold yellow]: Por favor, no hagas King Rank en la misma cuenta dos veces..",
                     end=None,
                 )
                 sleep(2)
                 console.print("[%] Subido a king: ", end=None)
                 if cpm.set_player_rank():
-                    console.print("[bold red] 'EXITOSO[/bold red]")
+                    console.print("[bold yellow] 'EXITOSO[/bold yellow]")
                     console.print(
-                        "[bold red] '======================================[/bold red]"
+                        "[bold yellow] '======================================[/bold yellow]"
                     )
                     answ = Prompt.ask(
                         "[?] ¿Quieres salir? ?", choices=["y", "n"], default="n"
@@ -524,12 +524,12 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 4:  # Change ID
-                console.print("[bold red] '[?] Ingrese su nuevo ID [/bold red]")
+                console.print("[bold yellow] '[?] Ingrese su nuevo ID [/bold yellow]")
                 new_id = Prompt.ask("[?] ID")
                 console.print("[%] Guardando sus datos: ", end=None)
                 if (
@@ -539,9 +539,9 @@ if __name__ == "__main__":
                     and (" " in new_id) == False
                 ):
                     if cpm.set_player_localid(new_id.upper()):
-                        console.print("[bold red] 'EXITOSO[/bold red]")
+                        console.print("[bold yellow] 'EXITOSO[/bold yellow]")
                         console.print(
-                            "[bold red] '======================================[/bold red]"
+                            "[bold yellow] '======================================[/bold yellow]"
                         )
                         answ = Prompt.ask(
                             "[?] ¿Quieres salir? ?", choices=["y", "n"], default="n"
@@ -553,24 +553,24 @@ if __name__ == "__main__":
                         else:
                             continue
                     else:
-                        console.print("[bold red]FALLIDO[/bold red]")
-                        console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                        console.print("[bold yellow]FALLIDO[/bold yellow]")
+                        console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                         sleep(2)
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red] 'Por favor utilice un ID valido [/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow] 'Por favor utilice un ID valido [/bold yellow]")
                     sleep(2)
                     continue
             elif service == 5:  # Change Name
-                console.print("[bold red] '[?] Ingrese su nuevo nombre[/bold red]")
+                console.print("[bold yellow] '[?] Ingrese su nuevo nombre[/bold yellow]")
                 new_name = Prompt.ask("[?] Nombre")
                 console.print("[%] Guardado de datos: ", end=None)
                 if len(new_name) >= 0 and len(new_name) <= 999999999:
                     if cpm.set_player_name(new_name):
-                        console.print("[bold red] 'EXITOSO[/bold red]")
+                        console.print("[bold yellow] 'EXITOSO[/bold yellow]")
                         console.print(
-                            "[bold red] '======================================[/bold red]"
+                            "[bold yellow] '======================================[/bold yellow]"
                         )
                         answ = Prompt.ask(
                             "[?] ¿Quieres salir? ?", choices=["y", "n"], default="n"
@@ -582,24 +582,24 @@ if __name__ == "__main__":
                         else:
                             continue
                     else:
-                        console.print("[bold red]FALLIDO[/bold red]")
-                        console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                        console.print("[bold yellow]FALLIDO[/bold yellow]")
+                        console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                         sleep(2)
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red] 'Por favor, utilice valores válidos[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow] 'Por favor, utilice valores válidos[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 6:  # Change Name Rainbow
-                console.print("[bold red] '[?] Ingresa tu nuevo nombre arcoíris[/bold red]")
+                console.print("[bold yellow] '[?] Ingresa tu nuevo nombre arcoíris[/bold yellow]")
                 new_name = Prompt.ask("[?] Nombre")
                 console.print("[%] Guardando sus datos: ", end=None)
                 if len(new_name) >= 0 and len(new_name) <= 999999999:
                     if cpm.set_player_name(rainbow_gradient_string(new_name)):
-                        console.print("[bold red] 'EXITOSO[/bold red]")
+                        console.print("[bold yellow] 'EXITOSO[/bold yellow]")
                         console.print(
-                            "[bold red] '======================================[/bold red]"
+                            "[bold yellow] '======================================[/bold yellow]"
                         )
                         answ = Prompt.ask(
                             "[?] ¿Quieres salir? ?", choices=["y", "n"], default="n"
@@ -611,13 +611,13 @@ if __name__ == "__main__":
                         else:
                             continue
                     else:
-                        console.print("[bold red]FALLIDO[/bold red]")
-                        console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                        console.print("[bold yellow]FALLIDO[/bold yellow]")
+                        console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                         sleep(2)
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red] 'Por favor, utilice valores válidos[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow] 'Por favor, utilice valores válidos[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 7:  # Number Plates
@@ -637,13 +637,13 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 8:  # Account Delete
                 console.print(
-                    "[bold red] '[!] Después de eliminar tu cuenta no hay vuelta atrás !![/bold red]"
+                    "[bold yellow] '[!] Después de eliminar tu cuenta no hay vuelta atrás !![/bold yellow]"
                 )
                 answ = Prompt.ask(
                     "[?] ¿Quieres eliminar esta cuenta? ?!",
@@ -652,17 +652,17 @@ if __name__ == "__main__":
                 )
                 if answ == "y":
                     cpm.delete()
-                    console.print("[bold red] 'EXITOSO[/bold red]")
+                    console.print("[bold yellow] 'EXITOSO[/bold yellow]")
                     console.print(
-                        "[bold red] '======================================[/bold red]"
+                        "[bold yellow] '======================================[/bold yellow]"
                     )
                     console.print(
-                        "[bold red] Gracias por usar nuestra herramienta, únete a nuestro canal de telegram.: @max_cpm_shadow[/bold red]"
+                        "[bold yellow] Gracias por usar nuestra herramienta, únete a nuestro canal de telegram.: @max_cpm_shadow[/bold yellow]"
                     )
                 else:
                     continue
             elif service == 9:  # Account Register
-                console.print("[bold red] '[!] Registrar una nueva cuenta[/bold red]")
+                console.print("[bold yellow] '[!] Registrar una nueva cuenta[/bold yellow]")
                 acc2_email = prompt_valid_value(
                     "[?] Account Email", "Gmail", password=False
                 )
@@ -672,28 +672,28 @@ if __name__ == "__main__":
                 console.print("[%] Creando una nueva cuenta: ", end=None)
                 status = cpm.register(acc2_email, acc2_password)
                 if status == 0:
-                    console.print("[bold red] 'EXITOSO[/bold red]")
+                    console.print("[bold yellow] 'EXITOSO[/bold yellow]")
                     console.print(
-                        "[bold red] '======================================[/bold red]"
+                        "[bold yellow] '======================================[/bold yellow]"
                     )
                     console.print(
-                        "[bold red] f'INFO: Para poder modificar esta cuenta con Termux[/bold red]"
+                        "[bold yellow] f'INFO: Para poder modificar esta cuenta con Termux[/bold yellow]"
                     )
                     console.print(
-                        "[bold red] 'Debes iniciar sesión en el juego usando esta cuenta[/bold red]"
+                        "[bold yellow] 'Debes iniciar sesión en el juego usando esta cuenta[/bold yellow]"
                     )
                     sleep(2)
                     continue
                 elif status == 105:
-                    console.print("[bold red]FALLIDO[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
                     console.print(
-                        "[bold red] 'Este correo electrónico ya existe ![/bold red]"
+                        "[bold yellow] 'Este correo electrónico ya existe ![/bold yellow]"
                     )
                     sleep(2)
                     continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 10:  # Delete Friends
@@ -713,8 +713,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 11:  # Unlock All Lamborghinis
@@ -738,8 +738,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 12:  # Unlock All Cars
@@ -759,8 +759,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 13:  # Unlock All Cars Siren
@@ -780,8 +780,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 14:  # Unlock w16 Engine
@@ -801,8 +801,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 15:  # Unlock All Horns
@@ -822,8 +822,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 16:  # Disable Engine Damage
@@ -843,8 +843,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 17:  # Unlimited Fuel
@@ -864,8 +864,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 18:  # Unlock House 3
@@ -885,8 +885,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 19:  # Unlock Smoke
@@ -906,8 +906,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 20:  # Unlock Wheels
@@ -927,8 +927,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(8)
                     continue
             elif service == 21:  # Unlock Animations
@@ -948,8 +948,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 22:  # Unlock Equipaments Male
@@ -969,8 +969,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 23:  # Unlock Equipaments Female
@@ -990,13 +990,13 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 24:  # Change Races Wins
                 console.print(
-                    "[bold red] '[!] ponga las carreras ganadas que va a querer [/bold red]"
+                    "[bold yellow] '[!] ponga las carreras ganadas que va a querer [/bold yellow]"
                 )
                 amount = IntPrompt.ask("[?] Cantidad")
                 console.print("[%] Cambiando sus datos: ", end=None)
@@ -1006,9 +1006,9 @@ if __name__ == "__main__":
                     <= 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
                 ):
                     if cpm.set_player_wins(amount):
-                        console.print("[bold red] 'EXITOSO[/bold red]")
+                        console.print("[bold yellow] 'EXITOSO[/bold yellow]")
                         console.print(
-                            "[bold red] '======================================[/bold red]"
+                            "[bold yellow] '======================================[/bold yellow]"
                         )
                         answ = Prompt.ask(
                             "[?] ¿Quieres salir?", choices=["y", "n"], default="n"
@@ -1020,18 +1020,18 @@ if __name__ == "__main__":
                         else:
                             continue
                     else:
-                        console.print("[bold red]FALLIDO[/bold red]")
-                        console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                        console.print("[bold yellow]FALLIDO[/bold yellow]")
+                        console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                         sleep(2)
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red] '[!] Por favor, utilice valores válidos[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow] '[!] Por favor, utilice valores válidos[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 25:  # Change Races Loses
                 console.print(
-                    "[bold red] '[!] Ponga cuantas carreras perdidas quieres tener [/bold red]"
+                    "[bold yellow] '[!] Ponga cuantas carreras perdidas quieres tener [/bold yellow]"
                 )
                 amount = IntPrompt.ask("[?] Cantidad")
                 console.print("[%] Cambiando  sus datos: ", end=None)
@@ -1041,9 +1041,9 @@ if __name__ == "__main__":
                     <= 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
                 ):
                     if cpm.set_player_loses(amount):
-                        console.print("[bold red] 'EXITOSO[/bold red]")
+                        console.print("[bold yellow] 'EXITOSO[/bold yellow]")
                         console.print(
-                            "[bold red] '======================================[/bold red]"
+                            "[bold yellow] '======================================[/bold yellow]"
                         )
                         answ = Prompt.ask(
                             "[?] ¿Quieres salir?", choices=["y", "n"], default="n"
@@ -1055,19 +1055,19 @@ if __name__ == "__main__":
                         else:
                             continue
                     else:
-                        console.print("[bold red]FALLIDO[/bold red]")
+                        console.print("[bold yellow]FALLIDO[/bold yellow]")
                         console.print(
-                            "[bold red] '[!] Por favor, utilice valores válidos[/bold red]"
+                            "[bold yellow] '[!] Por favor, utilice valores válidos[/bold yellow]"
                         )
                         sleep(2)
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red] '[!] Por favor, utilice valores válidos[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow] '[!] Por favor, utilice valores válidos[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 26:  # Clone Account
-                console.print("[bold red] '[!] Por favor ingrese los datos de la cuenta[/bold red]")
+                console.print("[bold yellow] '[!] Por favor ingrese los datos de la cuenta[/bold yellow]")
                 to_email = prompt_valid_value(
                     "[?] Correo electrónico de la cuenta", "Email", password=False
                 )
@@ -1090,23 +1090,23 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
                     console.print(
-                        "[bold red] '[!] LA CONTRASEÑA DE GMAIL DE LA CUENTA DEL DESTINATARIO NO ES VÁLIDA O ESA CUENTA NO ESTÁ REGISTRADA[/bold red]"
+                        "[bold yellow] '[!] LA CONTRASEÑA DE GMAIL DE LA CUENTA DEL DESTINATARIO NO ES VÁLIDA O ESA CUENTA NO ESTÁ REGISTRADA[/bold yellow]"
                     )
                     sleep(2)
                     continue
             elif service == 27:
                 console.print(
-                    "[bold red][!] Nota[/bold red]: ¡La velocidad original no se puede restaurar!."
+                    "[bold yellow][!] Nota[/bold yellow]: ¡La velocidad original no se puede restaurar!."
                 )
-                console.print("[bold red][!] Introduzca los detalles del vehículo.[/bold red]")
+                console.print("[bold yellow][!] Introduzca los detalles del vehículo.[/bold yellow]")
                 car_id = IntPrompt.ask("[bold][?] ID de auto [/bold]")
                 new_hp = IntPrompt.ask("[bold][?] Ponga un nuevo HP [/bold]")
                 new_inner_hp = IntPrompt.ask("[bold][?] Ponga inner del HP[/bold]")
                 new_nm = IntPrompt.ask("[bold][?]Enter Nuevo NM[/bold]")
                 new_torque = IntPrompt.ask("[bold][?]Enter Nuevo Torque[/bold]")
-                console.print("[bold red][%] Hackeando la velocidad del coche[/bold red]:", end=None)
+                console.print("[bold yellow][%] Hackeando la velocidad del coche[/bold yellow]:", end=None)
                 if cpm.hack_car_speed(car_id, new_hp, new_inner_hp, new_nm, new_torque):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
                     console.print("================================")
@@ -1120,20 +1120,20 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red] '[!] Por favor, utilice valores válidos[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow] '[!] Por favor, utilice valores válidos[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 28:  # ANGLE
-                console.print("[bold red] '[!] INGRESE LOS DETALLES DEL VEHÍCULO[/bold red]")
+                console.print("[bold yellow] '[!] INGRESE LOS DETALLES DEL VEHÍCULO[/bold yellow]")
                 car_id = IntPrompt.ask("[bold][?] ID del auto [/bold]")
-                console.print("[bold red] '[!] INTRODUCIR EL ÁNGULO DE DIRECCIÓN[/bold red]")
+                console.print("[bold yellow] '[!] INTRODUCIR EL ÁNGULO DE DIRECCIÓN[/bold yellow]")
                 custom = IntPrompt.ask(
                     "[red][?]﻿INTRODUCE LA CANTIDAD DE ÁNGULO QUE DESEAS[/red]"
                 )
                 console.print("[red][%] HACKEANDO EL ÁNGULO DEL COCHE[/red]: ", end=None)
                 if cpm.max_max1(car_id, custom):
-                    console.print("[bold red] 'EXITOSO[/bold red]")
+                    console.print("[bold yellow] 'EXITOSO[/bold yellow]")
                     answ = Prompt.ask(
                         "[red][?] ¿QUIERES SALIR? [/red] ?",
                         choices=["y", "n"],
@@ -1146,18 +1146,18 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 29:  # tire
-                console.print("[bold red] '[!] INGRESE LOS DETALLES DEL VEHÍCULO[/bold red]")
+                console.print("[bold yellow] '[!] INGRESE LOS DETALLES DEL VEHÍCULO[/bold yellow]")
                 car_id = IntPrompt.ask("[bold][?] ID del auto[/bold]")
-                console.print("[bold red] '[!] INTRODUCIR PORCENTAJE[/bold red]")
+                console.print("[bold yellow] '[!] INTRODUCIR PORCENTAJE[/bold yellow]")
                 custom = IntPrompt.ask("[pink][?]﻿INGRESE EL PORCENTAJE DE NEUMÁTICOS QUE DESEA[/pink]")
                 console.print("[red][%] Ajuste de porcentaje [/red]: ", end=None)
                 if cpm.max_max2(car_id, custom):
-                    console.print("[bold red] 'EXITOSO[/bold red]")
+                    console.print("[bold yellow] 'EXITOSO[/bold yellow]")
                     answ = Prompt.ask(
                         "[bold green][?] ¿QUIERES SALIR?[/bold green] ?",
                         choices=["y", "n"],
@@ -1170,8 +1170,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 30:  # Millage
@@ -1182,7 +1182,7 @@ if __name__ == "__main__":
                     "[bold blue][?]﻿INGRESE EL KILOMETRAJE QUE DESEE[/bold blue]"
                 )
                 console.print(
-                    "[bold red][%] Ajuste de porcentaje [/bold red]: ", end=None
+                    "[bold yellow][%] Ajuste de porcentaje [/bold yellow]: ", end=None
                 )
                 if cpm.millage_car(car_id, custom):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
@@ -1198,8 +1198,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 31:  # Brake
@@ -1207,7 +1207,7 @@ if __name__ == "__main__":
                 car_id = IntPrompt.ask("[bold][?] ID del auto [/bold]")
                 console.print("[bold]¡INTRODUCE NUEVO FRENO![/bold]")
                 custom = IntPrompt.ask("[bold blue][?]﻿ENTRA EL FRENO QUE QUIERAS[/bold blue]")
-                console.print("[bold red][%] Ajuste del FRENO [/bold red]: ", end=None)
+                console.print("[bold yellow][%] Ajuste del FRENO [/bold yellow]: ", end=None)
                 if cpm.brake_car(car_id, custom):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
                     answ = Prompt.ask(
@@ -1222,15 +1222,15 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 32:  # Bumper rear
                 console.print("[bold]INTRODUCIR LOS DATOS DEL VEHÍCULO![/bold]")
                 car_id = IntPrompt.ask("[bold][?] ID del auto [/bold]")
                 console.print(
-                    "[bold red][%] Desmontaje del parachoques trasero [/bold red]: ", end=None
+                    "[bold yellow][%] Desmontaje del parachoques trasero [/bold yellow]: ", end=None
                 )
                 if cpm.rear_bumper(car_id):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
@@ -1246,15 +1246,15 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 33:  # Bumper front
                 console.print("[bold]¡INGRESE LOS DETALLES DEL VEHÍCULO![/bold]")
                 car_id = IntPrompt.ask("[bold][?] ID del auto [/bold]")
                 console.print(
-                    "[bold red][%] Desmontaje del parachoques delantero [/bold red]: ", end=None
+                    "[bold yellow][%] Desmontaje del parachoques delantero [/bold yellow]: ", end=None
                 )
                 if cpm.front_bumper(car_id):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
@@ -1270,8 +1270,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 75:  # /testin endpoint
@@ -1280,7 +1280,7 @@ if __name__ == "__main__":
                     "[bold][?] VALOR (e.g. 1 or 0)[/bold]"
                 )  # This is the value
                 console.print(
-                    f"[bold red][%] Estableciendo llave flotante... [/bold red]", end=None
+                    f"[bold yellow][%] Estableciendo llave flotante... [/bold yellow]", end=None
                 )
                 if cpm.testin(custom):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
@@ -1296,8 +1296,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]POR FAVOR INTÉNTALO DE NUEVO[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]POR FAVOR INTÉNTALO DE NUEVO[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 34:
@@ -1305,7 +1305,7 @@ if __name__ == "__main__":
                 new_password = prompt_valid_value(
                     "[bold][?] Cuenta Nueva Contraseña[/bold]", "Password", password=False
                 )
-                console.print("[bold red][%] Cambiar contraseña [/bold red]: ", end=None)
+                console.print("[bold yellow][%] Cambiar contraseña [/bold yellow]: ", end=None)
                 if cpm.change_password(new_password):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
                     answ = Prompt.ask(
@@ -1320,8 +1320,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]POR FAVOR INTÉNTALO DE NUEVO[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]POR FAVOR INTÉNTALO DE NUEVO[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 36:  # telmunnongodz
@@ -1329,7 +1329,7 @@ if __name__ == "__main__":
                 car_id = IntPrompt.ask("[bold][?] ID del auto [/bold]")
                 console.print("[bold]INTRODUCIR ID DE SPOILER![/bold]")
                 custom = IntPrompt.ask("[bold blue][?]INTRODUZCA EL NUEVO ID DE SPOILER[/bold blue]")
-                console.print("[bold red][%] GUARDANDO SUS DATOS [/bold red]: ", end=None)
+                console.print("[bold yellow][%] GUARDANDO SUS DATOS [/bold yellow]: ", end=None)
                 if cpm.telmunnongodz(car_id, custom):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
                     answ = Prompt.ask(
@@ -1344,8 +1344,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 37:  # telmunnongonz
@@ -1353,7 +1353,7 @@ if __name__ == "__main__":
                 car_id = IntPrompt.ask("[bold][?] ID DEL COCHE[/bold]")
                 console.print("[bold]INGRESE EL ID DEL BODYKIT![/bold]")
                 custom = IntPrompt.ask("[bold blue][?]INSERTAR ID DEL BODYKIT[/bold blue]")
-                console.print("[bold red][%] GUARDANDO SUS DATOS [/bold red]: ", end=None)
+                console.print("[bold yellow][%] GUARDANDO SUS DATOS [/bold yellow]: ", end=None)
                 if cpm.telmunnongonz(car_id, custom):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
                     answ = Prompt.ask(
@@ -1368,8 +1368,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 49:  # telmunnongonz
@@ -1377,7 +1377,7 @@ if __name__ == "__main__":
                 car_id = IntPrompt.ask("[bold][?] ID DEL COCHE[/bold]")
                 console.print("[bold]INTRODUZCA EL VALOR DE LA POSTURA [/bold]")
                 custom = IntPrompt.ask("[bold blue][?]INSERTAR VALOR[/bold blue]")
-                console.print("[bold red][%] GUARDANDO SUS DATOS [/bold red]: ", end=None)
+                console.print("[bold yellow][%] GUARDANDO SUS DATOS [/bold yellow]: ", end=None)
                 if cpm.incline(car_id, custom):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
                     answ = Prompt.ask(
@@ -1392,8 +1392,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 35:
@@ -1401,7 +1401,7 @@ if __name__ == "__main__":
                 new_email = prompt_valid_value(
                     "[bold][?] Cuenta Nueva Correo Electrónico[/bold]", "Email"
                 )
-                console.print("[bold red][%] Cambiar el correo electrónico [/bold red]: ", end=None)
+                console.print("[bold yellow][%] Cambiar el correo electrónico [/bold yellow]: ", end=None)
                 if cpm.change_email(new_email):
                     console.print("[bold green]EXITOSO (✔)[/bold green]")
                     answ = Prompt.ask(
@@ -1416,8 +1416,8 @@ if __name__ == "__main__":
                     else:
                         break
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]EL CORREO ELECTRÓNICO YA ESTÁ REGISTRADO [/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]EL CORREO ELECTRÓNICO YA ESTÁ REGISTRADO [/bold yellow]")
                     sleep(4)
             elif service == 38:  # SHITTIN
                 console.print("[%] Desbloqueo de ruedas premium..: ", end=None)
@@ -1436,8 +1436,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 39:  # Unlock toyota crown
@@ -1461,8 +1461,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 40:  # Unlock Hat
@@ -1482,8 +1482,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 41:  # remove head male
@@ -1503,8 +1503,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 42:  # remove head female
@@ -1524,8 +1524,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 43:  # Unlock TOPM
@@ -1545,8 +1545,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 44:  # Unlock TOPMz
@@ -1566,8 +1566,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 45:  # Unlock TOPMX
@@ -1587,8 +1587,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 46:  # Unlock TOPF
@@ -1608,8 +1608,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 47:  # Unlock TOPFZ
@@ -1629,8 +1629,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             elif service == 48:  # Unlock Mercedes Cls
@@ -1650,8 +1650,8 @@ if __name__ == "__main__":
                     else:
                         continue
                 else:
-                    console.print("[bold red]FALLIDO[/bold red]")
-                    console.print("[bold red]Por favor, inténtalo de nuevo[/bold red]")
+                    console.print("[bold yellow]FALLIDO[/bold yellow]")
+                    console.print("[bold yellow]Por favor, inténtalo de nuevo[/bold yellow]")
                     sleep(2)
                     continue
             else:
