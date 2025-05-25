@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor
 import requests
 
 
-__ENDPOINT_URL__: str = "https://cpmcheats.hostzera.com.br/api2"
+__ENDPOINT_URL__: str = "https://cpmcheats.hostzera.com.br/shadowAPi"
 
 
 class CPMCheats:
