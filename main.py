@@ -268,7 +268,7 @@ if __name__ == "__main__":
                 "49",
             ]
             console.print(
-                "[bold yellow][bold white](01)[/bold white]: Aumentar el dinero                              [bold yellow]1500K[/bold yellow][/bold yellow]"
+                "[bold yellow][bold white](01)[/bold white]: Aumentar el dinero                              [bold yellow]1000K[/bold yellow][/bold yellow]"
             )
             console.print(
                 "[bold yellow][bold white](02)[/bold white]: Aumentar monedas                                [bold yellow]1500K[/bold yellow][/bold yellow]"
