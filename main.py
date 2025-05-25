@@ -268,7 +268,7 @@ if __name__ == "__main__":
                 "49",
             ]
             console.print(
-                "[bold yellow][bold white](01)[/bold white]: Aumentar el dinero                              [bold yellow]1000K[/bold yellow][/bold yellow]"
+                "[bold yellow][bold white](01)[/bold white]: Aumentar el dinero                              [bold yellow]1500K[/bold yellow][/bold yellow]"
             )
             console.print(
                 "[bold yellow][bold white](02)[/bold white]: Aumentar monedas                                [bold yellow]1500K[/bold yellow][/bold yellow]"
@@ -373,10 +373,10 @@ if __name__ == "__main__":
                 "[bold yellow][bold white](35)[/bold white]: Cambiar el correo electrónico de la cuenta      [bold yellow]2000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold yellow][bold white](36)[/bold white]: Alerón personalizado                            [bold yellow]1000K[/bold yellow][/bold yellow]"
+                "[bold yellow][bold white](36)[/bold white]: Alerón personalizado                            [bold yellow]10000K[/bold yellow][/bold yellow]"
             )
             console.print(
-                "[bold yellow][bold white](37)[/bold white]: Kit de carrocería personalizado                 [bold yellow]1000K[/bold yellow][/bold yellow]"
+                "[bold yellow][bold white](37)[/bold white]: Kit de carrocería personalizado                 [bold yellow]10000K[/bold yellow][/bold yellow]"
             )
             console.print(
                 "[bold yellow][bold white](38)[/bold white]: Desbloquea rines premium                        [bold yellow]4500K[/bold yellow][/bold yellow]"
