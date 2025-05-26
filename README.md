@@ -1,5 +1,5 @@
-# 🚀 CPMCheats - Advanced Hacking Tool 🚀  
-📌 *Developed by Rick Developer*  
+# 🚀 CPMMAX - HERRAMIENTA AVANZADA 🚀  
+📌 *Dueño de la herramienta  cts_max_*  
 
 ![CPMCheats](https://github.com/Rickdevsolutions/cpmcheats/blob/main/banner.jpg)  
 
