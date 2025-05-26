@@ -1,9 +1,9 @@
 # 🚀 CPMMAX - HERRAMIENTA AVANZADA 🚀  
 📌 *Dueño de la herramienta  cts_max_*  
 
-![CPMCheats](https://github.com/Rickdevsolutions/cpmcheats/blob/main/banner.jpg)  
+![CPMCheats](https://github.com/Rickdevsolutions/cpmcheats/blob/main/z.jpg)  
 
-## ⚡ About the Tool  
+## ⚡ Acerca de mi herramienta
 **CPMCheats** is an advanced hacking tool designed to unlock exclusive features in games. Developed by **Rick Developer**, it includes **Anti-Ban** and **Anti-Blacklist** protections, ensuring a safer experience.  
 
 ### ✨ Features:  
