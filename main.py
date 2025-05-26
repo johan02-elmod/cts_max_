@@ -268,7 +268,7 @@ def banner(console):
         Colorate.Horizontal(
             Colors.green_to_blue,
             Center.XCenter(
-                "─════════════════════════════[ 🄳🄴🅃🄰🄻🄻🄴🅂 🄳🄴 🄻🄰 🄲🅄🄴🄽🅃🄰 ]════════════════════════════─"
+                "─════════════════════════════[ DETALLES DE LA CUENTA ]════════════════════════════─"
             ),
         )
     )
@@ -495,32 +495,32 @@ if __name__ == "__main__":
                     Colors.green_to_blue,
                     Center.XCenter(
                         Box.DoubleCube(
-                            "➩ (01) Aumentar el dinero                1.5K  |  ➩ (02) Aumentar monedas                1.5K\n\n"
-                            "➩ (03) Rango de rey                     8K   |  ➩ (04) Cambiar ID                     4.5K\n\n"
-                            "➩ (05) Cambiar nombre                   100  |  ➩ (06) Cambiar nombre (Arcoíris)          100\n\n"
-                            "➩ (07) Placas de matrícula                 2K   |  ➩ (08) Eliminar cuenta                Free\n\n"
-                            "➩ (09) Registro de cuenta              Free |  ➩ (10) Eliminar amigos                500\n\n"
-                            "➩ (11) Desbloquear Lamborghinis (solo iOS) 5K  |  ➩ (12) Desbloquear todos los coches               6K\n\n"
-                            "➩ (13) Desbloquear la sirena de todos los coches         3.5K |  ➩ (14) Desbloquear el motor W16             4K\n\n"
-                            "➩ (15) Desbloquea todos los cuernos              3K   |  ➩ (16) Desbloquear Desactivar Daño        3K\n\n"
-                            "➩ (17) Desbloquea combustible ilimitado         3K   |  ➩ (18) Desbloquear Home 3                 4K\n\n"
-                            "➩ (19) Desbloquear humo                 4K   |  ➩ (20) Desbloquear ruedas                4K\n\n"
-                            "➩ (21) Desbloquear animaciones            2K   |  ➩ (22) Desbloquear equipos M         3K\n\n"
-                            "➩ (23) Desbloquear equipos F         3K   |  ➩ (24) Change Race Wins             1K\n\n"
-                            "➩ (25) Change Race Loses            1K   |  ➩ (26) Cuenta clonada                7K\n\n"
-                            "➩ (27) HP personalizado                     2.5K |  ➩ (28) Ángulo personalizado                1.5K\n\n"
-                            "➩ (29) Quemador de neumáticos personalizado           1.5K |  ➩ (30) Kilometraje de coches personalizados          1.5K\n\n"
-                            "➩ (31) Freno de coche personalizado             2K   |  ➩ (32) Quitar el parachoques trasero           2K\n\n"
-                            "➩ (33) Quitar el parachoques delantero          2K   |  ➩ (34) Cambiar la contraseña de la cuenta      2K\n\n"
-                            "➩ (35) Cambiar el correo electrónico de la cuenta         2K   |  ➩ (36) Alerón personalizado              10K\n\n"
-                            "➩ (37) Kit de carrocería personalizado               10K  |  ➩ (38) Desbloquea ruedas premium       4.5K\n\n"
-                            "➩ (39) Desbloquear Toyota Crown          2K   |  ➩ (40) Desbloquear sombrero de clan (M)         3K\n\n"
-                            "➩ (41) Quitar cabeza macho             3K  |  ➩ (42) Quitar cabeza hembra         3K\n\n"
-                            "➩ (43) Desbloquear el Top 1 del Clan (M)        3K   |  ➩ (44) Desbloquear los 2 mejores del clan (M)       3K\n\n"
-                            "➩ (45) Desbloquear los 3 mejores del clan (M)        3K   |  ➩ (46) Desbloquear el Top 1 del Clan (FM)      3K\n\n"
-                            "➩ (47) Desbloquear los 2 mejores del clan (FM)       3K   |  ➩ (48) Desbloquear Mercedes Cls         4K\n\n"
-                            "➩ (49) Truco de velocidad para todos los coches         7.5K   |  ➩ (50) Desbloquear coches de pago         5K\n\n"
-                            "➩ (51) Comba de postura               1k     |  ➩ (52) Copiar el diseño de un auto a otro por ID     2.5k\n\n"
+                            "➩ (01) Aumentar el dinero                         1.5K |  ➩ (02) Aumentar monedas                     1.5K\n\n"
+                            "➩ (03) Rango de rey                               8K   |  ➩ (04) Cambiar ID                           4.5K\n\n"
+                            "➩ (05) Cambiar nombre                             100  |  ➩ (06) Cambiar nombre (Arcoíris)            100\n\n"
+                            "➩ (07) Diseños de Placas aleatorias               2K   |  ➩ (08) Eliminar cuenta                      Gratis\n\n"
+                            "➩ (09) Crear nueva cuenta                         Free |  ➩ (10) Eliminar amigos                      500\n\n"
+                            "➩ (11) Desbloquear Lamborghinis (solo iOS)        5K   |  ➩ (12) Desbloquear todos los carros         6K\n\n"
+                            "➩ (13) Desbloquear la sirena en todos los carros  3.5K |  ➩ (14) Desbloquear el motor W16             4K\n\n"
+                            "➩ (15) Desbloquea todos los claxon                3K   |  ➩ (16) Desbloquear motor indestructible     3K\n\n"
+                            "➩ (17) Desbloquear gasolina infinita              3K   |  ➩ (18) Desbloquear la casa de paga          4K\n\n"
+                            "➩ (19) Desbloquear humo                           4K   |  ➩ (20) Desbloquear rines                    4K\n\n"
+                            "➩ (21) Desbloquear animaciones                    2K   |  ➩ (22) Desbloquear ropa M                   3K\n\n"
+                            "➩ (23) Desbloquear ropa F                         3K   |  ➩ (24) Cambiar carreras ganadas             1K\n\n"
+                            "➩ (25) Cambiar carreras perdidas                  1K   |  ➩ (26) Clonar cuenta                        7K\n\n"
+                            "➩ (27) HP personalizado                           2.5K |  ➩ (28) Ángulo personalizado                 1.5K\n\n"
+                            "➩ (29) Quemador neumáticos personalizado          1.5K |  ➩ (30) Kilometraje de coches personalizados 1.5K\n\n"
+                            "➩ (31) Freno del carro personalizado              2K   |  ➩ (32) Quitar el parachoques trasero        2K\n\n"
+                            "➩ (33) Quitar el parachoques delantero            2K   |  ➩ (34) Cambiar la contraseña de la cuenta   2K\n\n"
+                            "➩ (35) Cambiar el correo electrónico de la cuenta 2K   |  ➩ (36) Alerón personalizado                 10K\n\n"
+                            "➩ (37) Body kits personalizado                    10K  |  ➩ (38) Desbloquear rines de paga            4.5K\n\n"
+                            "➩ (39) Desbloquear auto del clan                  2K   |  ➩ (40) Desbloquear sombrero de clan (M)     3K\n\n"
+                            "➩ (41) Quitarle la cabeza al personaje (M)        3K   |  ➩ (42) Quitarle la cabeza al personaje (F)  3K\n\n"
+                            "➩ (43) Desbloquear la ropa top 1 del clan (M)     3K   |  ➩ (44) Desbloquear la ropa top 2 de clan M  3K\n\n"
+                            "➩ (45) Desbloquear la ropa top 3 del clan (M)     3K   |  ➩ (46) Desbloquear la ropa top 1 clan (FM)  3K\n\n"
+                            "➩ (47) Desbloquear la ropa top 2 del clan (FM)    3K   |  ➩ (48) Desbloquear Mercedes Cls             4K\n\n"
+                            "➩ (49) Poner HP a todos los autos                 7.5K |  ➩ (50) Desbloquear los autos de paga        5K\n\n"
+                            "➩ (51) Comba de postura                           1k   |  ➩ (52) Copiar el diseño de un auto a otro   2.5k\n\n"
                         )
                     ),
                 )
